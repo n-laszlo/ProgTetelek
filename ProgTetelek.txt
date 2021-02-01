@@ -1,0 +1,44 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _02._01
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] szamok ={2,5,8,9,4,1,3,6};
+            Console.WriteLine(Maximum(szamok));
+            Console.WriteLine(Minimum(szamok));
+
+            Console.ReadKey();
+        }
+        static int Maximum(int []szamok)
+        {
+            int max = 0;
+            for (int i = 0; i < szamok.Length; i++)
+            {
+                if (szamok[i]>max)
+                {
+                    max = szamok[i];
+                }
+            }
+            return max;
+        }
+        static int Minimum(int[] szamok)
+        {
+            int min = szamok[0];
+            for (int i = 0; i < szamok.Length; i++)
+            {
+                if (szamok[i] < min)
+                {
+                    min = szamok[i];
+                }
+            }
+            return min;
+        }
+    }
+}
